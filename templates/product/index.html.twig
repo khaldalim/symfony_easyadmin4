@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+
+
+
+    <h1>Page products</h1>
+
+<div class="row small-up-1 medium-up-2 large-up-3">
+
+    {% for product in products%}
+
+        {% include '/blocks/products/_product.html.twig' with {
+            slug:product.slug,
+            name: product.name,
+            description: product.description,
+            price: product.price,
+            image: product.image,
+            category: product.category, }
+        %}
+    {% endfor %}
+    </div>
+{% endblock %}

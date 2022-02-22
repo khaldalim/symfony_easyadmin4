@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+
+
+    <h1>{{ product.name }}</h1>
+    <h4>Category : {{ product.category }}</h4>
+    {{ product.description | raw }}
+    <h5>price : {{ product.price }} €</h5>
+    <img src="/uploads/images/products/{{ product.image}}">
+
+
+{% endblock %}

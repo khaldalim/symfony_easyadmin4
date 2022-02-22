@@ -1,0 +1,12 @@
+<div class="column">
+    <a href="{{ path('product-single' , {"slug": slug}) }}">
+    <div class="callout">
+        <h2>{{ name }} - {{ price ~ "€" }}</h2>
+        <div>
+            <img src="/uploads/images/products/{{ image }}">
+            {{ category }}
+            {{ description | raw }}
+        </div>
+    </div>
+    </a>
+</div>
